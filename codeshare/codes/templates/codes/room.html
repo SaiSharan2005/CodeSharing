@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<!-- <div>
+    <div>
+        <h3>{{room.Topic}}</h3>
+        <h1>The Quetions is</h1>
+        <h3>Question is </h3>
+        <pre>{{room.Question}}</pre>
+        <h3>Answer is this </h3>
+        <pre>{{room.Answer}}</pre>
+        <h3>How the code is Working</h3>
+        <pre>{{room.description}}</pre>
+        
+        
+    </div>
+</div> -->
+
+<div class="container_room">
+    <!-- HTML for the topic name -->
+    <h1 class="topic">{{room.Topic}}</h1>
+
+    <!-- HTML for the question and answer -->
+    <h2 class="h3_color" >Question</h2>
+    <pre class="question">{{room.Question}}
+    </pre>
+    <h3 class="h3_color">Answer</h2>
+    <pre class="answer">{{room.Answer}}    
+    </pre>
+
+    <!-- HTML for the description -->
+    <h3 class="h3_color">How the Code Works</h2>
+    <pre class="description">{{room.description}}    
+</pre>
+</div>
+
+{% endblock %}

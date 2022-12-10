@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% for room in rooms %}
+<!-- <h1>The Quetions are</h1>
+    <br> -->
+    <div class="container">
+    
+        <!-- HTML for box1 -->
+        <div class="box1">
+            <!-- HTML for the two boxes within box1 -->
+            <div>
+                <h3>{{room.Topic}}</h3>
+            </div>
+            <div>
+                <pre>{{room.Question|truncatewords:10}}</pre>
+            </div>
+        </div>
+
+        <!-- HTML for box2 -->
+        <div class="box2">
+            <!-- HTML for the link within box2 -->
+            <!-- <a href="https://www.example.com">Link</a> -->
+            <a href="{% url 'room' room.id%}">Answer</a>
+
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
